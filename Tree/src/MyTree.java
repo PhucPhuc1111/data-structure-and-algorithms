@@ -42,12 +42,25 @@ public Node insert(int x)
         this.insert(15);
         this.insert(9);
     }
+     public void preOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        // first print data of node
+        System.out.print(node.info + " ");
+
+        // then recur on left subtree
+        preOrder(node.left);
+
+        // now recur on right subtree
+        preOrder(node.right);
+    }
  
     // Utility function to return top element in a stack
     public void preOrder()
     {
-      
-
+      preOrder(root);
     }
     
     public void inOrder(Node p)
